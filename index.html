@@ -15,27 +15,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 </head>
-<body>
-  <nav class="navbar">
-
-    <div class="navbar__logo">
-      <a href="#header" class="logo">
-        <img src="./img/home.png">
-      </a>
-    </div>
-
-    <ul class="navbar__menu">
-      <li><a href="#">HOME</a></li>
-      <li><a href="#">PROFILE</a></li>
-      <li><a href="#">WORK</a></li>
-    </ul>
-
-  </nav>
-
-  <header id="header">
-    <div class="header_wrap">
-      <div class="header_tit">
+<body data-target=".navbar-collapse">
+  <!-- header -->
+  <header>
+    <!-- navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="horizontal-underline" id="horizontal-underline"></div>
+      <div class="navbar__logo" id="navbar-logo">
+        <a href="#banner" class="logo">
+          <img src="./img/home.png">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="navbar__menu">
+          <li><a class="non-active" href="#banner">HOME</a></li>
+          <li><a class="non-active" href="#">PROFILE</a></li>
+          <li><a class="non-active" href="#">WORK</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="banner_wrap" id="banner">
+      <div class="banner_tit">
         <h1>
           <span class="t_purple">YEWON'S</span>
           <span class="t_white">PORTFOLIO</span>
@@ -49,5 +53,14 @@
       </div>
     </div>
   </header>
+  <article>
+    <section>
+      <div class="profile_wrap">
+
+      </div>
+    </section>
+  </article>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
