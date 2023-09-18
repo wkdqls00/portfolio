@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/x-icon" href="https://tketlink.dn.toastoven.net/ticketlink-cdn/web/TLfavicon.ico">
+<title>9월 링크위크</title>
+<link rel="stylesheet" type="text/css" href="https://tketlink.dn.toastoven.net/tl/event/common/css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="https://tketlink.dn.toastoven.net/tl/event/common/css/event.css">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+</head>
+<body>
+<div class="evt_html_wrap">
+<style>
+ /* layout */
+  body{ font-family: "Pretendard";}
+  .evt_wrap{overflow:hidden;position:relative;width:100%;text-align:left;font-family: "Pretendard";}
+  .evt_wrap a,.evt_wrap button{display:block}
+  .evt_wrap img{width:100%;vertical-align:top}
+  .evt_wrap .evt{position:relative}
+  a{color: #000;}
+  .img_bx{border-radius:15px;overflow: hidden;height:58.3vw; border: 1px solid rgba(0, 0, 0, 0.1);}
+  .img_bx img{height:100%}
+  .card_tit_bx{padding-inline: 3px;}
+  .card_tit{font-size: 13.5px;font-weight: 700;line-height: 17px;letter-spacing: -0.36px;}
+  .txt_bx{height:65px;box-sizing: border-box;margin-top:15px;}
+  .day{display:inline-block;color: #BCBCBC;font-size: 11px;font-weight: 400;letter-spacing: -0.22px;margin-top: 6px;}
+  .dec{padding-top:5px}
+  .dec > span{background-color: #000;padding:2px 5px; color:#fff;margin-right: 6px;font-weight: 400;display: inline-block;height:14px;font-size: 9px;box-sizing: border-box;line-height: 10px;vertical-align: top;margin-block: 6px;}
+  .dec > strong{color: #FA2828;font-size: 22.5px;line-height: normal;letter-spacing: -0.9px;margin-right: 2.5px;}
+  .dec > em{color: #000;font-size: 11px;font-weight: 700;line-height: normal;vertical-align:top;margin-block: 6px;display: inline-block;}
+  .coupon_wrap .card_link{text-align: center;}
+  .coupon_txt {display:inline-block;margin-bottom: 23px;color: #333;font-size: 13.5px;font-weight: 400;line-height: 18.5px;letter-spacing: -0.54px;}
+  .coupon_wrap .img_wrap{width:100%}
+  .coupon_wrap .img_wrap img{width:100%}
+
+  /* gnb */
+  .gnb{z-index:20;width:100%;background-color:#fa2828;background-image:url(./img/mobile/bg_gnb.jpg);background-repeat:no-repeat;background-size:100% auto;box-sizing:border-box;}
+  .gnb.is_fixed{position:fixed;top:0;z-index:200;}
+  .gnb.is_fixed .gnb_lst .gnb_item {padding-block: 27.085%;}
+  .gnb .gnb_lst{display:table;width:100%;background:url(./img/mobile/gnb.png)50% 50% no-repeat;background-size:85%}
+  .gnb .gnb_lst li{display:table-cell;height:100%;background-repeat:no-repeat;width:33%}
+  .gnb .gnb_lst .gnb_item {width:100%;padding-block: 31.25%;}
+  .gnb .gnb_lst.gnb_1_on{background: url(./img/mobile/gnb_1_on.png)50% 50% no-repeat;background-size: 85%;}
+  .gnb .gnb_lst.gnb_2_on{background: url(./img/mobile/gnb_2_on.png)50% 50% no-repeat;background-size: 85%;}
+  .gnb .gnb_lst.gnb_3_on{background: url(./img/mobile/gnb_3_on.png)50% 50% no-repeat;background-size: 85%;}
+  /* swiper */
+  .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 2px;}
+  .evt_swiper_wrap{position:absolute;left:50%;width:calc(100% - 30px);height:118.333vw;transform:translateX(-50%)}
+  .evt_swiper_wrap.evt_swiper_perform{top:35%}
+  .evt_swiper_wrap.evt_swiper_kids{top:13.5%}
+  .evt_swiper_wrap.evt_swiper_exhibition{top:14.5%}
+  .evt_swiper_wrap .swiper-container{overflow:hidden;padding-bottom:17.777%}
+  .evt_swiper_wrap .swiper-slide{overflow:hidden;transition:all 0.3s;-webkit-transition:all 0.3s}
+  .evt_swiper_wrap .swiper-scrollbar{display:none;bottom:0;height:1.527vw;border-radius:10px;background:rgba(0, 0, 0, 0.1)}
+  
+  /* swiper-pagination */
+  .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:7%}
+  .evt_swiper_wrap .swiper-pagination-bullet{width:7.58%;height:2px;border-radius:2px;margin-right:4px}
+  .evt_swiper_wrap .swiper-pagination-bullet-active{background-color:#fa2828;}
+  /* Coupon Swiper */
+  .evt_swiper_wrap.evt_swiper_coupon{top:29%;}/*width:calc(100% - 30px);*/
+  .evt_swiper_wrap.evt_swiper_coupon .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom:4%}
+  /* link */
+  .btn_ticketlink { width: 20%; height: 10%; position: absolute; top: 3%; left: 4%;}
+  .btn_share { width: 15%; height: 10%; position: absolute; top: 3%; right: 4.5%;}
+  .event_link{position:absolute;left:50%;top:84%;transform:translateX(-50%);width:80%;height:11%}
+  .coupon_link{position:absolute;left:50%;top:72%;transform:translateX(-50%);width:80%;height:12%}
+  /* a {outline: 1px solid lime;} */
+
+</style>
+<div class="evt_wrap">
+  <div class="evt">
+    <h1 class="blind">9월 링크위크</h1>
+    <img src="./img/mobile/img01.jpg" alt="">
+    <p class="blind">이벤트 기간 : 2023년 9월 11일 월요일 오전 10시부터 2023년 9월 17일 일요일 오후 11시 59분까지</p>
+    <a href="#" onclick="clip(); return false;" class="btn_share"><span class="blind">공유</span></a>
+    <a href="http://www.ticketlink.co.kr" class="btn_ticketlink"><span class="blind">티켓링크 바로가기</span></a>
+  </div>
+	<div class="gnb">
+		<ul class="gnb_lst">
+			<li><a href="#sec_1" class="gnb_item gnb_1"><span class="blind">Link Week</span></a></li>
+			<li><a href="#sec_2" class="gnb_item gnb_2"><span class="blind">Time Sale</span></a></li>
+			<li><a href="#sec_3" class="gnb_item gnb_3"><span class="blind">Event</span></a></li>
+		</ul>
+	</div>
+  <div class="sec">
+    <div class="evt_gnb_content">
+      <div class="evt">
+        <h2 class="blind">LINK WEEK</h2>
+        <img src="./img/mobile/img02.jpg" alt="">
+        <h3 class="blind">링크위크 is?</h3>
+        <p class="blind">일주일간 문화를 할인하다! 합리적인 가격에 핫한 공연과 전시를 모아 7일 동안 특가로 만나볼 수 있는 특별한 위크입니다.</p>
+        <ul class="blind">
+          <li>타임세일 권종명은 ‘링크위크’입니다.</li>
+          <li>좌석 별 할인율, 할인 적용 회차, 매수 제한 등 상세 할인 정보는 각 상품 상세페이지에서 확인 가능합니다.</li>
+        </ul>
+        <ul class="blind">
+          <li>공연 최대 할인 <strong>60%</strong></li> 
+          <li>전시 추가 할인 <strong>2,000원</strong></li> 
+          <li>예매수수료면제 <strong>COUPON</strong></li> 
+          <li>SNS경품 <strong>EVENT</strong></li> 
+        </ul>
+      </div>
+    </div>
+    <div class="evt_gnb_content" id="sec_1">
+      <div class="evt">
+        <h2 class="blind">TIME SALE</h2>
+        <img src="./img/mobile/img03.jpg" alt="">
+        <p class="blind">할인 기간 : 8월 7일 월요일부터 8월 13일 일요일까지</p>
+        <h3 class="blind">뮤지컬/연극</h3>
+        <div class="evt_swiper_wrap evt_swiper_perform">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/44920" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_4/222_poster_0713.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">뮤지컬 &#60;22년 2개월&#62;</h3>
+                      <span class="day">2023.08.31 ~ 2023.11.05</span>
+                    </div>
+                    <div class="dec"><span>최대</span><strong>35%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/44996" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_1/main0718(1).jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">뮤지컬 &#60;사칠&#62;</h3>
+                      <span class="day">2023.08.29 ~ 2023.11.05</span>
+                    </div>
+                    <div class="dec"><span>최대</span><strong>40%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/44995" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_8/burning_main_0720.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">뮤지컬<br>&#60;타오르는 어둠 속에서&#62;</h3>
+                      <span class="day">2023.08.26 ~ 2023.11.26</span>
+                    </div>
+                    <div class="dec"><span>전석</span><strong>35%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/45221" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_8/hook_pst_0807.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">뮤지컬 &#60;후크&#62;</h3>
+                      <span class="day">2023.09.05 ~ 2023.11.26</span>
+                    </div>
+                    <div class="dec"><span>전석</span><strong>35%</strong><em>할인</em></div>
+                 </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/45248" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_7/3_info_0808.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">뮤지컬 &#60;삼총사&#62;</h3>
+                      <span class="day">2023.09.15 ~ 2023.11.19</span>
+                    </div>
+                    <div class="dec"><span>전석</span><strong>30%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/45448" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_10/rock_0819.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">뮤지컬 &#60;위윌락유&#62;</h3>
+                      <span class="day">2023.09.22 ~ 2023.12.31</span>
+                    </div>
+                    <div class="dec"><span>전석</span><strong>40%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/39895" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_1/m0817.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">개와 고양이의 시간<br>DVD / KIT</h3>
+                      <span class="day">2023.08.18 ~ 2023.12.31</span>
+                    </div>
+                    <div class="dec"><span>전회차</span><strong>전등급</strong><em>할인</em></div>
+                 </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/bridge/971" class="card_link">
+                  <div class="img_bx">
+                    <img src="http://image.toast.com/aaaaab/ticketlink/TKL_3/r_bri0718.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">레트로슈퍼콘서트<br>in 서울/대구</h3>
+                      <span class="day">2023.09.23 ~ 2023.10.28</span>
+                    </div>
+                    <div class="dec"><span>VIP/R/S석</span><strong>10%</strong><em>할인</em></div>
+                 </div>
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="evt">
+        <h3 class="blind">아동/지방</h3>
+        <img src="./img/mobile/img04.jpg" alt="">
+        <div class="evt_swiper_wrap evt_swiper_kids">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/bridge/913" class="card_link">
+                  <div class="img_bx">
+                    <img src="http://image.toast.com/aaaaab/ticketlink/TKL_10/b0304.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">캐리tv 쇼뮤지컬 &#60;캐리와 슈퍼걸스&#62; - 당진/창원/고양/인천/서울앵콜/안산</h3>
+                      <span class="day">2023.09.16 ~ 2023.11.26</span>
+                    </div>
+                    <div class="dec"><span>최대</span><strong>37%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/bridge/800" class="card_link">
+                  <div class="img_bx">
+                    <img src="http://image.toast.com/aaaaab/ticketlink/TKL_1/jump_230627.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">캐리tv 액티비티 &#60;점프점프&#62; - 강릉/평택/부천/서울앵콜/대구</h3>
+                      <span class="day">2023.09.16 ~ 2023.11.26</span>
+                    </div>
+                    <div class="dec"><span>최대</span><strong>36%</strong><em>할인</em></div>
+                 </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/45301" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_5/peter_0810.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">가족 뮤지컬 피터팬 - 안성</h3>
+                      <span class="day">2023.09.23 ~ 2023.09.23</span>
+                    </div>
+                    <div class="dec"><span>R석</span><strong>50%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/44777" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_1/sinbi_pst_0705.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">뮤지컬 신비아파트<br>&#60;붉은 눈의 저주&#62;</h3>
+                      <span class="day">2023.09.02 ~ 2023.10.09</span>
+                    </div>
+                    <div class="dec"><span>평일 전석</span><strong>26000</strong><em>원</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/45297" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_3/paul_pst0821.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">폴포츠 내한 공연<br>- 군포</h3>
+                      <span class="day">2023.10.08 ~ 2023.10.08</span>
+                    </div>
+                    <div class="dec"><span>R,S석</span><strong>10%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/44864" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_6/ok_ph_main_0711.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">2023 김창옥<br>토크콘서트 - 포항</h3>
+                      <span class="day">2023.10.22 ~ 2023.10.22</span>
+                    </div>
+                    <div class="dec"><span>R/S석</span><strong>5%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/44865" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_3/ok_gs_main_0711.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">2023 김창옥<br>토크콘서트 - 군산</h3>
+                      <span class="day">2023.11.04 ~ 2023.11.04</span>
+                    </div>
+                    <div class="dec"><span>R/S/A석</span><strong>5%</strong><em>할인</em></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="evt">
+        <h3 class="blind">전시</h3>
+        <img src="./img/mobile/img05.jpg" alt="">
+        <div class="evt_swiper_wrap evt_swiper_exhibition">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/43901" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_2/n_pst12421242_0426.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">영국내셔널갤러리명화전</h3>
+                      <span class="day">2023.06.02 ~ 2023.10.09</span>
+                    </div>
+                    <div class="dec"><span>추가쿠폰</span><strong>2000</strong><em>원</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/45420" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_9/eva-bs-ticketlink_720x889.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">에바 알머슨 특별전<br>(부산) 얼리버드</h3>
+                      <span class="day">2023.09.22 ~ 2024.03.24</span>
+                    </div>
+                    <div class="dec"><span>추가쿠폰</span><strong>2000</strong><em>원 할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/45174" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_4/VB-DJ-ticketlink-720x889.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">빈센트 발 ART OF SHADOW 얼리버드</h3>
+                      <span class="day">2023.09.15 ~ 2023.10.15</span>
+                    </div>
+                    <div class="dec"><span>추가쿠폰</span><strong>2000</strong><em>원 할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/44603" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_4/부산-데이비드호크니_티켓링크-720x889.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">데이비드 호크니 & 브리티쉬 팝 아트 부산</h3>
+                      <span class="day">2023.07.21 ~ 2023.11.26</span>
+                    </div>
+                    <div class="dec"><span>추가쿠폰</span><strong>2000</strong><em>원 할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/44472" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_6/앙리마티스_포스터_0704_720x889.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">앙리 마티스 특별전</h3>
+                      <span class="day">2023.06.17 ~ 2023.12.31</span>
+                    </div>
+                    <div class="dec"><span>추가쿠폰</span><strong>2000</strong><em>원 할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/44964" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_10/miguel_pst0717.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">미구엘 슈발리에<br>디지털 뷰티 시즌2</h3>
+                      <span class="day">2023.08.01 ~ 2024.02.12</span>
+                    </div>
+                    <div class="dec"><span>추가쿠폰</span><strong>2000</strong><em>원 할인</em></div>
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="https://m.ticketlink.co.kr/product/45296" class="card_link">
+                  <div class="img_bx">
+                    <img src="https://image.toast.com/aaaaab/ticketlink/TKL_2/ilya_pst0809.jpg" alt="">
+                  </div>
+                  <div class="card_tit_bx">
+                    <div class="txt_bx">
+                      <h3 class="card_tit">일리야 밀스타인 :<br>기억의 캐비닛</h3>
+                      <span class="day">2023.09.20 ~ 2024.03.03</span>
+                    </div>
+                    <div class="dec"><span>추가쿠폰</span><strong>2000</strong><em>원 할인</em></div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sec_2" class="sec">
+    <div class="evt_gnb_content coupon_wrap">
+      <div class="evt">
+        <h3 class="blind">예매수수료 면제 쿠폰 증정</h3>
+        <img src="./img/mobile/img06.jpg" alt="">
+        <div class="evt_swiper_wrap evt_swiper_coupon">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="card_link">
+                  <em class="coupon_txt">카카오톡 티켓링크 채널을 추가하고<br>쿠폰을 받아보세요.</em>
+                  <div class="img_wrap">
+                    <img src="./img/coupon_card_01_m.png" alt="">
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card_link">
+                  <em class="coupon_txt">쿠폰 받기를 클릭한 뒤<br>쿠폰번호를 copy하고 등록하기 버튼을 누르세요.</em>
+                  <div class="img_wrap">
+                    <img src="./img/coupon_card_02_m.png" alt="">
+                  </div>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="card_link">
+                  <em class="coupon_txt">티켓링크 마이페이지에서<br>쿠폰번호를 등록하고 쿠폰적용상품을 구매해보세요.</em>
+                  <div class="img_wrap">
+                    <img src="./img/coupon_card_03_m.png" alt="">
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <a href="#" class="coupon_link">
+          <span class="blind">쿠폰 받으러 가기</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="sec_3" class="sec">
+    <div class="evt_gnb_content" id="evtEvent">
+      <div class="evt">
+        <h2 class="blind">링크위크 소문내고 상품권 받아가자!</h2>
+        <img src="./img/mobile/img07.jpg" alt="">
+        <ul class="blind">
+          <li>
+            <p>
+              STEP 1<br>
+              티켓링크 SNS를 팔로우
+            </p>
+          </li>
+          <li>
+            <p>
+              STEP 2<br>
+              혼자만 알기 아까운<br>
+              링크위크 공연/전시를 추천해주세요!
+            </p>
+          </li>
+          <li>
+            <p>
+              STEP 3<br>
+              @친구까지 소환하고,<br>
+              동네방네 소문 내주시면 끝!
+            </p>
+          </li>
+        </ul>
+        <a href="#" class="event_link">
+          <span class="blind">이벤트 참여하러 가기</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://tketlink.dn.toastoven.net/tl/event/common/js/swiper.min.js"></script>
+<script>
+var prefix = ['perform', 'kids', 'exhibition'];
+for(var i = 0; i < prefix.length ; i++){
+  var swiper = new Swiper(`.evt_swiper_${prefix[i]} .swiper-container` , {
+    speed: 1000,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 10,
+    loop: true,
+    loopFillGroupWithBlank : true,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    pagination: { 
+      el: ".swiper-pagination", 
+      clickable: true, 
+    },
+  });
+}
+
+var prefix = ['coupon'];
+for(var i = 0; i < prefix.length ; i++){
+  var swiper = new Swiper(`.evt_swiper_${prefix[i]} .swiper-container` , {
+    // freeMode: true,
+    speed: 1000,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    loopAdditionalSlides: 100,
+    loop: true,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    pagination: { 
+      el: ".swiper-pagination", 
+      clickable: true, 
+    },
+  });
+}
+
+$(document).ready(function() {
+	var gnb = $(".gnb");
+	var gnb1 = $(".gnb_1");
+	var gnb2 = $(".gnb_2");
+	var gnb3 = $(".gnb_3");
+  var gnbList = $(".gnb_lst");
+
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		var sec1pos = $('#sec_1').offset().top - 50;
+		var sec2pos = $('#sec_2').offset().top - 50;
+		var sec3pos = $('#sec_3').offset().top - 50;
+    var evt = $(".evt").height();
+		var gnbHeight = $(".gnb.is_fixed").height();
+
+		if (windowpos > evt - gnbHeight) {
+			gnb.addClass("is_fixed");
+      gnbList.addClass("pb")
+		} else {
+			gnb.removeClass("is_fixed");
+      gnbList.removeClass("pb")
+		}
+		if (windowpos >= sec1pos && windowpos < sec2pos - 1) {
+			gnbList.addClass("gnb_1_on");
+		} else {
+			gnbList.removeClass("gnb_1_on");
+		}
+		if (windowpos >= sec2pos - 1 && windowpos < sec3pos - 1) {
+			gnbList.addClass("gnb_2_on");
+		} else {
+			gnbList.removeClass("gnb_2_on");
+		}
+		if (windowpos >= sec3pos - 1) {
+			gnbList.addClass("gnb_3_on");
+		} else {
+			gnbList.removeClass("gnb_3_on");
+		}
+	});
+
+    // // 클릭이벤트
+  $('.gnb_item').on('click', function(event) { 
+    event.preventDefault();
+    var x = $(this).attr("href");
+    $('html, body').stop().animate({scrollTop: $(x).offset().top - 50}, 1000);
+  });
+
+});
+
+function clip() {
+    var url = '';
+    var textarea = document.createElement("textarea");
+    document.body.appendChild(textarea);
+    url = window.document.location.href;
+    textarea.value = url;
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("URL이 복사되었습니다.");
+  }
+</script>
+</div>
+</body>
+</html>
