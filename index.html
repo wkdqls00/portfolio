@@ -20,25 +20,11 @@
 
 </head>
 <body data-target=".navbar-collapse">
-  <!-- header -->
-  <header>
-    <!-- navbar -->
-    <nav class="navbar" id="navbar">
-      <div class="horizontal-underline" id="horizontal-underline"></div>
-      <div class="navbar__logo" id="navbar-logo">
-        <a href="#banner" class="logo">
-          <img src="./img/home.png">
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-menu">
-        <ul class="navbar__menu">
-          <li><a class="non-active" href="#banner">HOME</a></li>
-          <li><a class="non-active" href="#">PROFILE</a></li>
-          <li><a class="non-active" href="#">WORK</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="banner_wrap" id="banner">
+  <div id="fullpage">
+    <div class='quick'>
+      <ul></ul>
+    </div>
+    <div class="banner_wrap fullsection full1" id="banner" pageNum="1">
       <div class="banner_tit">
         <h1>
           <span class="t_purple">YEWON'S</span>
@@ -52,15 +38,110 @@
         <img src="./img/cloud_2.png">
       </div>
     </div>
-  </header>
-  <article>
-    <section>
-      <div class="profile_wrap">
-
+    <div class="profile_wrap fullsection full2" id="profile" pageNum="2">
+      <div class="profile_tit_wrap">
+        <div class="sparkle"></div>
+        <h1>PROFILE</h1>
       </div>
-    </section>
-  </article>
+      <div class="profile_box_wrap">
+        <div class="profile_box"></div>
+        <div class="profile_txt_wrap">
+          <div class="profile_txt">
+            <h2>
+              <b>장예원</b> | 1999.01.28 | 마크업 개발자
+            </h2>
+            <span>
+              안녕하세요. ~는 개발자 어쩌고 저쩌고<br>
+              어쩌고 저쩌고
+            </span>
+          </div>
+          <div class="skills">SKILLS</div>
+          <div class="skills_box_wrap">
+            <div class="skills_hashtag">#FRONT-END<span>프론트엔드</span></div>
+            <div class="skills_box">
+              <img src="./img/html.png">
+            </div>
+            <div class="skills_box">
+              <img src="./img/css.png">
+            </div>
+            <div class="skills_box">
+              <img src="./img/js.png">
+            </div>
+            <div class="skills_box">
+              <img src="./img/jquery.png">
+            </div>
+          </div>
+          <div class="skills_box_wrap">
+            <div class="skills_hashtag">#BACK-END<span>백엔드</span></div>
+            <div class="skills_box">
+              <img src="./img/python.png">
+            </div>
+            <div class="skills_box">
+              <img src="./img/sql.png">
+            </div>
+          </div>
+          <div class="skills_box_wrap">
+            <div class="skills_hashtag">#TOOLS<span>도구 프로그램</span></div>
+            <div class="skills_box">
+              <img src="./img/git.png">
+            </div>
+            <div class="skills_box">
+              <img src="./img/vs.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="exp_wrap fullsection full3" id="experience" pageNum="3">
+      <div class="exp_tit_wrap">
+        <div class="sparkle"></div>
+        <h1>EXPERIENCE</h1>
+      </div>
+    </div>
+    <div class="work_wrap fullsection full4" id="work" pageNum="4">
+      <div class="work_tit_wrap">
+        <div class="sparkle"></div>
+        <h1>WORK</h1>
+      </div>
+      
+    </div>
 
+    <!-- <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+      slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+      coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+      <swiper-slide>
+        <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+      </swiper-slide>
+      <swiper-slide>
+        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+      </swiper-slide>
+    </swiper-container> -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
